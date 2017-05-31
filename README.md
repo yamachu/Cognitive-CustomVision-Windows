@@ -14,7 +14,7 @@ The easiest way to get the training client library is to get the [Microsoft.Cogn
 ## The Sample
 The sample is a Windows Console application that shows how to create and train a project, then make a prediction against the newly trained endpoint.
 
-### Build the sample
+### Build the sample - Windows
 1. Start Microsoft Visual Studio 2015 and select File > Open > Project/Solution.
 
 2. Starting in the folder where you clone the repository, go to Samples > CustomVision.Sample
@@ -22,6 +22,23 @@ The sample is a Windows Console application that shows how to create and train a
 3. Double-click the Visual Studio 2015 Solution (.sln) file CustomVision.Sample.
 
 4. Press Ctrl+Shift+B, or select Build > Build Solution.
+
+### Build the sample - OSX, Linux
+1. Clone this repository
+
+2. Change directory to Samples/CustomVision.Sample
+
+3. type your console `dotnet restore`
+
+4. You'll see error message that {Prediction, Training} Client Library is not compatible
+
+5. Open new console, and move to ${HOME}/.nuget/packages/microsoft.cognitive.customvision.{prediction, training}/1.0.0/lib
+
+6. Rename `dotnet` to `netstandard1.3` and close this console
+
+7. Back to first console, and type `dotnet restore`
+
+8. Enjoy
 
 ### Run the sample
 
@@ -60,4 +77,4 @@ Sample images are licensed separately, please refer to [LICENSE-IMAGE](</LICENSE
 
 
 ## Developer Code of Conduct
-Developers using Cognitive Services, including this client library & sample, are expected to follow the “Developer Code of Conduct for Microsoft Cognitive Services”, found at [http://go.microsoft.com/fwlink/?LinkId=698895](http://go.microsoft.com/fwlink/?LinkId=698895).
+Developers using Cognitive Services, including this client library & sample, are expected to follow the ï¿½Developer Code of Conduct for Microsoft Cognitive Servicesï¿½, found at [http://go.microsoft.com/fwlink/?LinkId=698895](http://go.microsoft.com/fwlink/?LinkId=698895).
